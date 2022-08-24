@@ -57,24 +57,7 @@
                         <h1>Department</h1>
                         <div class="front-box">
 
-                                <?php
-                                    include("connection.php");
-
-                                    // $servername = "localhost";
-                                    // $username = "root";
-                                    // $password = "";
-                                    // $dbname = "college";
-            
-                                    //                     // Create connection
-                                    // $conn = new mysqli($servername, $username, $password, $dbname);
-                                                        // Check connection
-                                    if ($con->connect_error) {
-                                        die("Connection failed: " . $con->connect_error);
-                                    }
-            
-                                $sql = "SELECT dept_id, dept_Name FROM department";
-                                $result = $con->query($sql);
-                                ?>
+                               
                                 <table>
                                     <tr>
                                         <th>Department ID</th>
@@ -89,24 +72,7 @@
                                         
                                     </tr>
                                     
-                                <?php
-                                    if ($result->num_rows > 0) {
-                                  
-                                    // output data of each row
-                                    while($row = $result->fetch_assoc()){
-                                        echo "<tr>  
-                                                <td >" . $row["dept_id"]. "</td>
-                                                <td >" . $row["dept_Name"]. "</td>
-                                            </tr>";
-                                    }
-                                   
-                                } 
-                                else {
-                                        echo "0 results";
-                                }
-            
-                            
-                            ?>
+                                
                                 </table>
                                 </marquee>
                             
@@ -137,24 +103,7 @@
                                     
                                 </tr>
                                 
-                            <?php
-                                if ($result->num_rows > 0) {
-                              
-                                // output data of each row
-                                while($row = $result->fetch_assoc()){
-                                    echo "<tr>  
-                                            <td >" . $row["course_id"]. "</td>
-                                            <td >" . $row["course_Name"]. "</td>
-                                        </tr>";
-                                }
-                               
-                            } 
-                            else {
-                                    echo "0 results";
-                            }
-                            $con->close();
-                        
-                        ?>
+                            
                             </table>
                             </marquee>
                             
